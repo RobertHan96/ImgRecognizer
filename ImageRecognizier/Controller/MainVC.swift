@@ -27,9 +27,13 @@ class MainVC: BaseViewController {
         picker.delegate = self
         if let detectedImg = detectedImg.image {
             MLkitManager.detectLabels(img: detectedImg) { (label) in
-                self.titleLabel.text = label.name
-                self.firstResultLabel.text = "결과 : \(label.name)"
-                self.secondResultLabel.text = "매칭률 : \(label.confidence)"
+                print("[Log]",label.first)
+//                self.titleLabel.text = label.name
+//                self.firstResultLabel.text = "결과 : \(label.name)"
+//                self.secondResultLabel.text = "매칭률 : \(label.confidence)"
+            }
+            MLkitManager.detectLandmarks(img: detectedImg) { (landmark) in
+                print("[Log]", landmark.first)
             }
         }
     }
