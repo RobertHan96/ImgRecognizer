@@ -32,7 +32,9 @@ class MLkitManager {
         
         cloudDetector.detect(in: img) { (landmarks, error) in
             guard error == nil, let landmarks = landmarks, !landmarks.isEmpty else {
-              return
+                let failuerResult : [VisionLabel] = []
+                completeion(failuerResult)
+                return
             }
             var resultRandmarks : [VisionLabel] = []
             for landmark in landmarks {

@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 extension String {
     var localized: String {
@@ -7,3 +8,8 @@ extension String {
        }
 }
 
+extension Float {
+    var makeConfPoint: String {return "\(String(format : "%.1f", self))%" }
+    var makeConfToConts: CGFloat {return CGFloat(self*0.01) }
+
+}
