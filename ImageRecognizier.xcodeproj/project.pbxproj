@@ -17,6 +17,8 @@
 		0414FA3624BEDB340082CDAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0414FA3524BEDB340082CDAB /* GoogleService-Info.plist */; };
 		0414FA3824BFE3040082CDAB /* MLkitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0414FA3724BFE3040082CDAB /* MLkitManager.swift */; };
 		0414FA3C24BFF8B80082CDAB /* VisionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0414FA3B24BFF8B80082CDAB /* VisionLabel.swift */; };
+		04CBCF5B24C73B73002A60F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04CBCF5D24C73B73002A60F4 /* Localizable.strings */; };
+		04CBCF5F24C73DB5002A60F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF5E24C73DB5002A60F4 /* Extensions.swift */; };
 		4011D4E751D4BBBCAB2934B1 /* Pods_ImageRecognizierTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92F211DC3EDC431D23CFB7D /* Pods_ImageRecognizierTests.framework */; };
 		798BA8677C93F174D157FAAD /* Pods_ImageRecognizier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A7EEE32146B5FD682E4304 /* Pods_ImageRecognizier.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		0414FA3524BEDB340082CDAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0414FA3724BFE3040082CDAB /* MLkitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLkitManager.swift; sourceTree = "<group>"; };
 		0414FA3B24BFF8B80082CDAB /* VisionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionLabel.swift; sourceTree = "<group>"; };
+		04CBCF5C24C73B73002A60F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		04CBCF5E24C73DB5002A60F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		13E0C79C86B90F4246247883 /* Pods-ImageRecognizier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognizier.debug.xcconfig"; path = "Target Support Files/Pods-ImageRecognizier/Pods-ImageRecognizier.debug.xcconfig"; sourceTree = "<group>"; };
 		16A7EEE32146B5FD682E4304 /* Pods_ImageRecognizier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageRecognizier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		412C491D9158E4778E318FCD /* Pods-ImageRecognizierTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognizierTests.release.xcconfig"; path = "Target Support Files/Pods-ImageRecognizierTests/Pods-ImageRecognizierTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		0414FA0224BED8640082CDAB = {
 			isa = PBXGroup;
 			children = (
+				04CBCF5D24C73B73002A60F4 /* Localizable.strings */,
 				0414FA3524BEDB340082CDAB /* GoogleService-Info.plist */,
 				0414FA0D24BED8640082CDAB /* ImageRecognizier */,
 				0414FA2424BED86A0082CDAB /* ImageRecognizierTests */,
@@ -130,6 +135,7 @@
 		0414FA3A24BFF8410082CDAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04CBCF5E24C73DB5002A60F4 /* Extensions.swift */,
 				0414FA3724BFE3040082CDAB /* MLkitManager.swift */,
 				0414FA3B24BFF8B80082CDAB /* VisionLabel.swift */,
 			);
@@ -240,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CBCF5B24C73B73002A60F4 /* Localizable.strings in Resources */,
 				0414FA1B24BED86A0082CDAB /* LaunchScreen.storyboard in Resources */,
 				0414FA3624BEDB340082CDAB /* GoogleService-Info.plist in Resources */,
 				0414FA1824BED86A0082CDAB /* Assets.xcassets in Resources */,
@@ -326,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0414FA3424BEDA550082CDAB /* MainVC.swift in Sources */,
+				04CBCF5F24C73DB5002A60F4 /* Extensions.swift in Sources */,
 				0414FA3C24BFF8B80082CDAB /* VisionLabel.swift in Sources */,
 				0414FA3824BFE3040082CDAB /* MLkitManager.swift in Sources */,
 				0414FA1324BED8640082CDAB /* BaseViewController.swift in Sources */,
@@ -366,6 +374,14 @@
 				0414FA1A24BED86A0082CDAB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04CBCF5D24C73B73002A60F4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CBCF5C24C73B73002A60F4 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

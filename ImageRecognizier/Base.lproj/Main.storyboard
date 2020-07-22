@@ -64,9 +64,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-1w-oev">
-                                                <rect key="frame" x="0.0" y="65.5" width="62.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="65.5" width="42" height="60"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="매칭률">
+                                                    <fragment content="결과">
                                                         <attributes>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="24" name="NanumGothic"/>
@@ -102,6 +102,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main" id="CIc-gt-piH">
+                        <barButtonItem key="leftBarButtonItem" image="square.and.arrow.up.fill" catalog="system" id="7Uy-hq-EdE">
+                            <connections>
+                                <action selector="testAlert:" destination="BYZ-38-t0r" id="DhJ-4U-0of"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="tSB-08-Tnx">
                             <connections>
                                 <action selector="addImg:" destination="BYZ-38-t0r" id="Zi0-IL-50U"/>
@@ -141,5 +146,6 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
     </resources>
 </document>

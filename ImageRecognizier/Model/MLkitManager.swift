@@ -14,8 +14,8 @@ class MLkitManager {
                 let labelName = label.text
                 guard let labelConfidence = label.confidence else { return }
                 let labelConfFloat = labelConfidence.floatValue * 100
-                let labelConfStr = "\(Int(labelConfFloat))%"
-                let label = VisionLabel(name: labelName, confidence: labelConfStr)
+//                let labelConfStr = "\(Int(labelConfFloat))%"
+                let label = VisionLabel(name: labelName, confidence: labelConfFloat)
                 resultLabels.append(label)
             }
             completeion(resultLabels)
@@ -41,8 +41,8 @@ class MLkitManager {
 //              let entityId = landmark.entityId
                 guard let confidence = landmark.confidence else {return}
                 let landmarkConfFloat = confidence.floatValue * 100
-                let landmarkConfStr = "\(Int(landmarkConfFloat))%"
-                resultRandmarks.append(VisionLabel(name: name, confidence: landmarkConfStr))
+//                let landmarkConfStr = "\(Int(landmarkConfFloat))%"
+                resultRandmarks.append(VisionLabel(name: name, confidence: landmarkConfFloat))
             }
             completeion(resultRandmarks)
         }
