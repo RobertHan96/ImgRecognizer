@@ -2,7 +2,15 @@ import Firebase
 import Foundation
 
 class MLkitManager {
-    static func detectLabels(img : UIImage, completeion : @escaping ([VisionLabel]) -> Void) {
+//    let shared = MLkitManager()
+    func logResult(resultArr : [VisionLabel]) {
+        for result in resultArr {
+            print("[Log]탐지 결과")
+            print("[Log]",result)
+        }
+    }
+    
+    func detectLabels(img : UIImage, completeion : @escaping ([VisionLabel]) -> Void) {
         let img = VisionImage(image: img)
         let cloudOptions = VisionCloudImageLabelerOptions()
         cloudOptions.confidenceThreshold = 0.5
@@ -22,7 +30,7 @@ class MLkitManager {
         }
     }
     
-    static func detectLandmarks(img : UIImage, completeion : @escaping ([VisionLabel]) -> Void) {
+    func detectLandmarks(img : UIImage, completeion : @escaping ([VisionLabel]) -> Void) {
         let img = VisionImage(image: img)
         let cloudOptions = VisionCloudDetectorOptions()
         cloudOptions.modelType = .latest
@@ -39,11 +47,8 @@ class MLkitManager {
             var resultRandmarks : [VisionLabel] = []
             for landmark in landmarks {
                 guard let name = landmark.landmark else {return}
-//              let boundingPoly = landmark.frame
-//              let entityId = landmark.entityId
                 guard let confidence = landmark.confidence else {return}
                 let landmarkConfFloat = confidence.floatValue * 100
-//                let landmarkConfStr = "\(Int(landmarkConfFloat))%"
                 resultRandmarks.append(VisionLabel(name: name, confidence: landmarkConfFloat))
             }
             completeion(resultRandmarks)

@@ -7,11 +7,11 @@ class BaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    open func setupUI() {
+    func setupUI() {
         
     }
     
-    open func setValues() {
+    func setValues() {
         
     }
 
