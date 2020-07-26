@@ -1,13 +1,8 @@
 import UIKit
-import Foundation
 import Firebase
 import Network
     
 class MainVC: UIViewController {
-    let picker = UIImagePickerController()
-    var mLkit = MLkitManager()
-    let mornitor = NWPathMonitor()
-    let queue = DispatchQueue.global(qos: .background)
     @IBOutlet weak var detectIndicator: UIActivityIndicatorView!
     @IBOutlet weak var detectedImg: UIImageView!
     @IBOutlet weak var resultViewContainer: UIView!
@@ -18,28 +13,22 @@ class MainVC: UIViewController {
     @IBOutlet weak var secondConfLabel: UILabel!
     @IBOutlet weak var firstConfGraph: NSLayoutConstraint!
     @IBOutlet weak var secondConfGraph: NSLayoutConstraint!
+    let picker = UIImagePickerController()
+    var mLkit = MLkitManager()
+    let mornitor = NWPathMonitor()
+    let queue = DispatchQueue.global(qos: .background)
     
     override func viewDidLoad() {
         picker.delegate = self
         setupUI()
     }
-    
-    func setupUI() {
-        detectIndicator.stopAnimating()
-        resultViewContainer.layer.cornerRadius = 10
-        resultViewContainer.isHidden = true
-        detectedImg.layer.borderWidth = 1
-        detectedImg.layer.borderColor = UIColor.darkGray.cgColor
-        detectedImg.layer.cornerRadius = 10
-        firstResultLabel.adjustsFontSizeToFitWidth = true
-        secondResultLabel.adjustsFontSizeToFitWidth = true
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
     }
     
     @IBAction func addImg(_ sender: Any) {
         addImageAlertAction()
+        checkNetworkConect()
     }
     
     func detectLabel(){
@@ -79,21 +68,26 @@ class MainVC: UIViewController {
         self.secondConfLabel.text = "\(resultArr[1].confidence.makeConfPoint)"
         self.resultViewContainer.isHidden = false
         self.detectIndicator.stopAnimating()
-        
-        UIView.animate(withDuration: 2) {
-            let containerWith = self.resultViewContainer.layer.bounds.width
-            self.firstConfGraph.constant = containerWith * resultArr[0].confidence.makeConfToConts
-            self.secondConfGraph.constant = containerWith * resultArr[1].confidence.makeConfToConts
-            self.view.layoutIfNeeded()
+        animDetectResult(resultArr: resultArr)
+    }
+    
+    func checkNetworkConect() {
+        mornitor.start(queue: queue)
+        mornitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                print("[Log] connected with internet")
+            } else {
+                self.showNetworkErrorPopup()
+            }
         }
     }
+
 }// class
 
 extension MainVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             detectedImg.image = image
-            print(info)
          }
         dismiss(animated: true, completion: nil)
         detectUserRequestAction()

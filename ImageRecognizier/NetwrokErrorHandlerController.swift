@@ -1,7 +1,7 @@
 import UIKit
 import Network
 
-class NetwrokWaringPopup: BaseViewController {
+class NetwrokWaringPopup: MainVC {
     @IBOutlet weak var netwrokStatusLabel: UILabel!
 
     override func viewDidLoad() {
