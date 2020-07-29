@@ -20,7 +20,6 @@
 		04CBCF5B24C73B73002A60F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04CBCF5D24C73B73002A60F4 /* Localizable.strings */; };
 		04CBCF5F24C73DB5002A60F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF5E24C73DB5002A60F4 /* Extensions.swift */; };
 		04CBCF6124C7EA19002A60F4 /* NetwrokWaringPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */; };
-		04CBCF6324C7EA64002A60F4 /* NetworkErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF6224C7EA64002A60F4 /* NetworkErrorHandler.swift */; };
 		04CBCF6724CD9A34002A60F4 /* NetwrokErrorHandlerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */; };
 		04CBCF6E24CDC8ED002A60F4 /* MainViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */; };
 		04CBCF7124CDCE82002A60F4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF7024CDCE82002A60F4 /* MainView.swift */; };
@@ -56,7 +55,6 @@
 		04CBCF5C24C73B73002A60F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04CBCF5E24C73DB5002A60F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NetwrokWaringPopup.storyboard; sourceTree = "<group>"; };
-		04CBCF6224C7EA64002A60F4 /* NetworkErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrorHandler.swift; sourceTree = "<group>"; };
 		04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokErrorHandlerController.swift; sourceTree = "<group>"; };
 		04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewActions.swift; sourceTree = "<group>"; };
 		04CBCF7024CDCE82002A60F4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				04CBCF6F24CDCE68002A60F4 /* View */,
 				0414FA3A24BFF8410082CDAB /* Model */,
 				0414FA3924BFF8280082CDAB /* Controller */,
-				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
 			);
 			path = ImageRecognizier;
 			sourceTree = "<group>";
@@ -142,6 +139,7 @@
 				0414FA1224BED8640082CDAB /* BaseViewController.swift */,
 				0414FA3324BEDA550082CDAB /* MainVC.swift */,
 				04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */,
+				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,7 +147,6 @@
 		0414FA3A24BFF8410082CDAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04CBCF6224C7EA64002A60F4 /* NetworkErrorHandler.swift */,
 				04CBCF5E24C73DB5002A60F4 /* Extensions.swift */,
 				0414FA3724BFE3040082CDAB /* MLkitManager.swift */,
 				0414FA3B24BFF8B80082CDAB /* VisionLabel.swift */,
@@ -358,7 +355,6 @@
 			files = (
 				0414FA3424BEDA550082CDAB /* MainVC.swift in Sources */,
 				04CBCF5F24C73DB5002A60F4 /* Extensions.swift in Sources */,
-				04CBCF6324C7EA64002A60F4 /* NetworkErrorHandler.swift in Sources */,
 				04CBCF7124CDCE82002A60F4 /* MainView.swift in Sources */,
 				0414FA3C24BFF8B80082CDAB /* VisionLabel.swift in Sources */,
 				0414FA3824BFE3040082CDAB /* MLkitManager.swift in Sources */,

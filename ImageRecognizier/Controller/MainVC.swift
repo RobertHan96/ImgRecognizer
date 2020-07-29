@@ -15,22 +15,16 @@ class MainVC: UIViewController {
     @IBOutlet weak var secondConfGraph: NSLayoutConstraint!
     let picker = UIImagePickerController()
     var mLkit = MLkitManager()
-    let mornitor = NWPathMonitor()
-    let queue = DispatchQueue.global(qos: .background)
-    
-    override func viewDidLoad() {
-        picker.delegate = self
-        setupUI()
-    }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+        setupUI()
+        picker.delegate = self
     }
     
     @IBAction func addImg(_ sender: Any) {
         addImageAlertAction()
-        checkNetworkConect()
     }
-    
+
     func detectLabel(){
         detectIndicator.startAnimating()
         if let detectedImg = detectedImg.image {
@@ -70,18 +64,6 @@ class MainVC: UIViewController {
         self.detectIndicator.stopAnimating()
         animDetectResult(resultArr: resultArr)
     }
-    
-    func checkNetworkConect() {
-        mornitor.start(queue: queue)
-        mornitor.pathUpdateHandler = { path in
-            if path.status == .satisfied {
-                print("[Log] connected with internet")
-            } else {
-                self.showNetworkErrorPopup()
-            }
-        }
-    }
-
 }// class
 
 extension MainVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
