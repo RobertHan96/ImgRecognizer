@@ -17,6 +17,10 @@
 		0414FA3624BEDB340082CDAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0414FA3524BEDB340082CDAB /* GoogleService-Info.plist */; };
 		0414FA3824BFE3040082CDAB /* MLkitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0414FA3724BFE3040082CDAB /* MLkitManager.swift */; };
 		0414FA3C24BFF8B80082CDAB /* VisionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0414FA3B24BFF8B80082CDAB /* VisionLabel.swift */; };
+		04611E12254A41660052F248 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04611E11254A41660052F248 /* FilterVC.swift */; };
+		04611E14254A41B80052F248 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04611E13254A41B80052F248 /* FilterView.swift */; };
+		04611E17254A46930052F248 /* FilterPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */; };
+		04611E18254A46930052F248 /* FilterPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */; };
 		04CBCF5B24C73B73002A60F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04CBCF5D24C73B73002A60F4 /* Localizable.strings */; };
 		04CBCF5F24C73DB5002A60F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF5E24C73DB5002A60F4 /* Extensions.swift */; };
 		04CBCF6124C7EA19002A60F4 /* NetwrokWaringPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */; };
@@ -52,6 +56,10 @@
 		0414FA3524BEDB340082CDAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0414FA3724BFE3040082CDAB /* MLkitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLkitManager.swift; sourceTree = "<group>"; };
 		0414FA3B24BFF8B80082CDAB /* VisionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionLabel.swift; sourceTree = "<group>"; };
+		04611E11254A41660052F248 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		04611E13254A41B80052F248 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		04CBCF5C24C73B73002A60F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04CBCF5E24C73DB5002A60F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NetwrokWaringPopup.storyboard; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 			children = (
 				0414FA1224BED8640082CDAB /* BaseViewController.swift */,
 				0414FA3324BEDA550082CDAB /* MainVC.swift */,
+				04611E11254A41660052F248 /* FilterVC.swift */,
 				04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */,
 				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
 			);
@@ -158,6 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				04CBCF7024CDCE82002A60F4 /* MainView.swift */,
+				04611E13254A41B80052F248 /* FilterView.swift */,
+				04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */,
+				04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				0414FA1B24BED86A0082CDAB /* LaunchScreen.storyboard in Resources */,
 				0414FA3624BEDB340082CDAB /* GoogleService-Info.plist in Resources */,
 				0414FA1824BED86A0082CDAB /* Assets.xcassets in Resources */,
+				04611E18254A46930052F248 /* FilterPreviewCollectionViewCell.xib in Resources */,
 				0414FA1624BED8640082CDAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,11 +366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04611E14254A41B80052F248 /* FilterView.swift in Sources */,
+				04611E12254A41660052F248 /* FilterVC.swift in Sources */,
 				0414FA3424BEDA550082CDAB /* MainVC.swift in Sources */,
 				04CBCF5F24C73DB5002A60F4 /* Extensions.swift in Sources */,
 				04CBCF7124CDCE82002A60F4 /* MainView.swift in Sources */,
 				0414FA3C24BFF8B80082CDAB /* VisionLabel.swift in Sources */,
 				0414FA3824BFE3040082CDAB /* MLkitManager.swift in Sources */,
+				04611E17254A46930052F248 /* FilterPreviewCollectionViewCell.swift in Sources */,
 				0414FA1324BED8640082CDAB /* BaseViewController.swift in Sources */,
 				04CBCF6E24CDC8ED002A60F4 /* MainViewActions.swift in Sources */,
 				04CBCF6724CD9A34002A60F4 /* NetwrokErrorHandlerController.swift in Sources */,

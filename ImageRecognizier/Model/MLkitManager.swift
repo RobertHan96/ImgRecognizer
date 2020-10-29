@@ -2,7 +2,6 @@ import Firebase
 import Foundation
 
 class MLkitManager {
-//    let shared = MLkitManager()
     func logResult(resultArr : [VisionLabel]) {
         for result in resultArr {
             print("[Log]탐지 결과")

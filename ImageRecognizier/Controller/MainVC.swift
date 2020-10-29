@@ -13,6 +13,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var secondConfLabel: UILabel!
     @IBOutlet weak var firstConfGraph: NSLayoutConstraint!
     @IBOutlet weak var secondConfGraph: NSLayoutConstraint!
+    let originImage = AppDelegate().originImage
     let picker = UIImagePickerController()
     var mLkit = MLkitManager()
 
@@ -70,8 +71,11 @@ extension MainVC : UIImagePickerControllerDelegate, UINavigationControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             detectedImg.image = image
+            originImage?.image = image
          }
         dismiss(animated: true, completion: nil)
-        detectUserRequestAction()
+        guard let filterVC = self.storyboard?.instantiateViewController(withIdentifier: "filterVC") else { return }
+        self.navigationController?.pushViewController(filterVC, animated: true)
+//        detectUserRequestAction()
      }
 }
