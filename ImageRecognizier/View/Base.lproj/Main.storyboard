@@ -12,7 +12,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="ImageRecognizier" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainVC" customModule="ImageRecognizier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,14 +174,11 @@
         <!--FilterVC-->
         <scene sceneID="juW-Fb-UUa">
             <objects>
-                <viewController storyboardIdentifier="filterVC" id="7LQ-5C-WPF" customClass="FilterVC" customModule="ImageRecognizier" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="filterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7LQ-5C-WPF" customClass="FilterVC" customModule="ImageRecognizier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iqo-uh-nIe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-Tn-7Hd">
-                                <rect key="frame" x="20" y="244" width="374" height="314"/>
-                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uw5-ww-a33">
                                 <rect key="frame" x="0.0" y="658" width="414" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -206,22 +203,46 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOA-qD-i6D">
+                                <rect key="frame" x="20" y="124" width="374" height="454"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-Tn-7Hd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="454"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wbY-Tn-7Hd" firstAttribute="top" secondItem="bOA-qD-i6D" secondAttribute="top" id="Ws0-5m-iGN"/>
+                                    <constraint firstAttribute="bottom" secondItem="wbY-Tn-7Hd" secondAttribute="bottom" id="b65-df-4P1"/>
+                                    <constraint firstItem="wbY-Tn-7Hd" firstAttribute="leading" secondItem="bOA-qD-i6D" secondAttribute="leading" id="bW9-2I-stC"/>
+                                    <constraint firstAttribute="trailing" secondItem="wbY-Tn-7Hd" secondAttribute="trailing" id="jpb-fG-LnK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-3k-LVV">
+                                <rect key="frame" x="29" y="71" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Uw5-ww-a33" firstAttribute="top" secondItem="bOA-qD-i6D" secondAttribute="bottom" constant="80" id="5oQ-tP-cTd"/>
                             <constraint firstItem="Uw5-ww-a33" firstAttribute="leading" secondItem="mwz-zG-f8x" secondAttribute="leading" id="61T-48-ejs"/>
                             <constraint firstItem="mwz-zG-f8x" firstAttribute="trailing" secondItem="Uw5-ww-a33" secondAttribute="trailing" id="78i-wI-0I5"/>
-                            <constraint firstItem="Uw5-ww-a33" firstAttribute="top" secondItem="wbY-Tn-7Hd" secondAttribute="bottom" constant="100" id="GDA-Pi-iPn"/>
                             <constraint firstItem="mwz-zG-f8x" firstAttribute="bottom" secondItem="Uw5-ww-a33" secondAttribute="bottom" constant="4" id="LiQ-u5-CEa"/>
-                            <constraint firstItem="wbY-Tn-7Hd" firstAttribute="top" secondItem="mwz-zG-f8x" secondAttribute="top" constant="200" id="Rsw-mX-eWD"/>
-                            <constraint firstItem="mwz-zG-f8x" firstAttribute="trailing" secondItem="wbY-Tn-7Hd" secondAttribute="trailing" constant="20" id="fww-og-4xZ"/>
-                            <constraint firstItem="wbY-Tn-7Hd" firstAttribute="leading" secondItem="mwz-zG-f8x" secondAttribute="leading" constant="20" id="ka0-qX-k7z"/>
+                            <constraint firstItem="bOA-qD-i6D" firstAttribute="top" secondItem="mwz-zG-f8x" secondAttribute="top" constant="80" id="YX8-54-aRo"/>
+                            <constraint firstItem="mwz-zG-f8x" firstAttribute="trailing" secondItem="bOA-qD-i6D" secondAttribute="trailing" constant="20" id="a3W-PM-TMk"/>
+                            <constraint firstItem="bOA-qD-i6D" firstAttribute="leading" secondItem="mwz-zG-f8x" secondAttribute="leading" constant="20" id="e9u-jK-8WR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mwz-zG-f8x"/>
                     </view>
+                    <navigationItem key="navigationItem" id="82R-ur-Ajh"/>
                     <connections>
                         <outlet property="filterPreviewCollectionView" destination="Uw5-ww-a33" id="DZV-9V-lf1"/>
                         <outlet property="filterdImage" destination="wbY-Tn-7Hd" id="a34-rV-4kV"/>
+                        <outlet property="myLabel" destination="YFL-3k-LVV" id="55j-tz-nRH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUd-pi-A6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

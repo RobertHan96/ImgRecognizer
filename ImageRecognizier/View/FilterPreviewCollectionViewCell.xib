@@ -17,15 +17,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="511" height="332"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="handwriting-1362879_1920" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-he-gpY">
-                        <rect key="frame" x="-704.5" y="29.5" width="1920" height="294.5"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPu-Pw-vnE">
                         <rect key="frame" x="4" y="8" width="503" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="example" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-he-gpY">
+                        <rect key="frame" x="-704.5" y="29.5" width="1920" height="294.5"/>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
@@ -42,10 +42,10 @@
                 <outlet property="filterImgPreView" destination="BZa-he-gpY" id="xTT-d0-Ksl"/>
                 <outlet property="filterName" destination="lPu-Pw-vnE" id="gkG-Ot-OZ2"/>
             </connections>
-            <point key="canvasLocation" x="-50" y="301"/>
+            <point key="canvasLocation" x="-50.000000000000007" y="300.66964285714283"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="handwriting-1362879_1920" width="1920" height="1280"/>
+        <image name="example" width="1920" height="1280"/>
     </resources>
 </document>

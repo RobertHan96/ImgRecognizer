@@ -21,6 +21,7 @@
 		04611E14254A41B80052F248 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04611E13254A41B80052F248 /* FilterView.swift */; };
 		04611E17254A46930052F248 /* FilterPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */; };
 		04611E18254A46930052F248 /* FilterPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */; };
+		04611E1A254A668B0052F248 /* FilterViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04611E19254A668B0052F248 /* FilterViewActions.swift */; };
 		04CBCF5B24C73B73002A60F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04CBCF5D24C73B73002A60F4 /* Localizable.strings */; };
 		04CBCF5F24C73DB5002A60F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBCF5E24C73DB5002A60F4 /* Extensions.swift */; };
 		04CBCF6124C7EA19002A60F4 /* NetwrokWaringPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */; };
@@ -60,6 +61,7 @@
 		04611E13254A41B80052F248 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		04611E19254A668B0052F248 /* FilterViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewActions.swift; sourceTree = "<group>"; };
 		04CBCF5C24C73B73002A60F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04CBCF5E24C73DB5002A60F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NetwrokWaringPopup.storyboard; sourceTree = "<group>"; };
@@ -119,12 +121,10 @@
 		0414FA0D24BED8640082CDAB /* ImageRecognizier */ = {
 			isa = PBXGroup;
 			children = (
-				04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */,
-				0414FA1424BED8640082CDAB /* Main.storyboard */,
-				0414FA1924BED86A0082CDAB /* LaunchScreen.storyboard */,
 				0414FA0E24BED8640082CDAB /* AppDelegate.swift */,
 				0414FA1C24BED86A0082CDAB /* Info.plist */,
 				0414FA1724BED86A0082CDAB /* Assets.xcassets */,
+				04611E1B254A7E0D0052F248 /* Actions */,
 				04CBCF6F24CDCE68002A60F4 /* View */,
 				0414FA3A24BFF8410082CDAB /* Model */,
 				0414FA3924BFF8280082CDAB /* Controller */,
@@ -147,7 +147,6 @@
 				0414FA1224BED8640082CDAB /* BaseViewController.swift */,
 				0414FA3324BEDA550082CDAB /* MainVC.swift */,
 				04611E11254A41660052F248 /* FilterVC.swift */,
-				04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */,
 				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
 			);
 			path = Controller;
@@ -163,9 +162,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		04611E1B254A7E0D0052F248 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */,
+				04611E19254A668B0052F248 /* FilterViewActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		04CBCF6F24CDCE68002A60F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0414FA1924BED86A0082CDAB /* LaunchScreen.storyboard */,
+				0414FA1424BED8640082CDAB /* Main.storyboard */,
+				04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */,
 				04CBCF7024CDCE82002A60F4 /* MainView.swift */,
 				04611E13254A41B80052F248 /* FilterView.swift */,
 				04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */,
@@ -374,6 +385,7 @@
 				0414FA3C24BFF8B80082CDAB /* VisionLabel.swift in Sources */,
 				0414FA3824BFE3040082CDAB /* MLkitManager.swift in Sources */,
 				04611E17254A46930052F248 /* FilterPreviewCollectionViewCell.swift in Sources */,
+				04611E1A254A668B0052F248 /* FilterViewActions.swift in Sources */,
 				0414FA1324BED8640082CDAB /* BaseViewController.swift in Sources */,
 				04CBCF6E24CDC8ED002A60F4 /* MainViewActions.swift in Sources */,
 				04CBCF6724CD9A34002A60F4 /* NetwrokErrorHandlerController.swift in Sources */,
