@@ -28,7 +28,9 @@ extension DetectionVC {
                     self.setupResult(resultArr: labels)
                 }
             } // detectLandmarks
-        } // if let
+        } else {
+            print("이미지 감지 불가")
+        }
     } // func
     
     func detectLandmark() {
@@ -43,16 +45,18 @@ extension DetectionVC {
                     self.setupResult(resultArr: landmarks)
                 }
             } // detectLandmarks
-        } // if let
+        } else {
+            print("이미지 감지 불가")
+        }
     } // func
     
     func setupResult(resultArr : [VisionLabel]) {
+        self.detectionResultView.detectIndicator.stopAnimating()
         self.detectionResultView.firstResultLabel.text = "\(resultArr[0].name)"
         self.detectionResultView.firstConfLabel.text = "\(resultArr[0].confidence.makeConfPoint)"
         self.detectionResultView.secondResultLabel.text = "\(resultArr[1].name)"
         self.detectionResultView.secondConfLabel.text = "\(resultArr[1].confidence.makeConfPoint)"
         self.detectionResultView.isHidden = false
-        self.detectionResultView.detectIndicator.stopAnimating()
         animDetectResult(resultArr: resultArr)
     }
 }

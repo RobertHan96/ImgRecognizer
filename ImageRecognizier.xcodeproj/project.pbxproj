@@ -130,12 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				0414FA0E24BED8640082CDAB /* AppDelegate.swift */,
-				0414FA1C24BED86A0082CDAB /* Info.plist */,
 				0414FA1724BED86A0082CDAB /* Assets.xcassets */,
-				04611E1B254A7E0D0052F248 /* Actions */,
-				04CBCF6F24CDCE68002A60F4 /* View */,
+				0414FA1C24BED86A0082CDAB /* Info.plist */,
+				0414FA1924BED86A0082CDAB /* LaunchScreen.storyboard */,
+				0414FA1424BED8640082CDAB /* Main.storyboard */,
+				04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */,
 				0414FA3A24BFF8410082CDAB /* Model */,
-				0414FA3924BFF8280082CDAB /* Controller */,
+				0422B1E925510A8500B0EF94 /* Main */,
+				0422B1EA25510AAE00B0EF94 /* ImageFilter */,
+				0422B1EB25510AC000B0EF94 /* ImageRecognition */,
 			);
 			path = ImageRecognizier;
 			sourceTree = "<group>";
@@ -149,17 +152,6 @@
 			path = ImageRecognizierTests;
 			sourceTree = "<group>";
 		};
-		0414FA3924BFF8280082CDAB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0414FA3324BEDA550082CDAB /* MainVC.swift */,
-				04611E11254A41660052F248 /* FilterVC.swift */,
-				0422B1E12550DB0700B0EF94 /* DetectionVC.swift */,
-				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		0414FA3A24BFF8410082CDAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,31 +162,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		04611E1B254A7E0D0052F248 /* Actions */ = {
+		0422B1E925510A8500B0EF94 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				04CBCF7024CDCE82002A60F4 /* MainView.swift */,
 				04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */,
-				04611E19254A668B0052F248 /* FilterViewActions.swift */,
-				0422B1DF2550DAB800B0EF94 /* DetectionViewActions.swift */,
+				0414FA3324BEDA550082CDAB /* MainVC.swift */,
+				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
 			);
-			path = Actions;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		04CBCF6F24CDCE68002A60F4 /* View */ = {
+		0422B1EA25510AAE00B0EF94 /* ImageFilter */ = {
 			isa = PBXGroup;
 			children = (
-				0414FA1924BED86A0082CDAB /* LaunchScreen.storyboard */,
-				0414FA1424BED8640082CDAB /* Main.storyboard */,
-				04CBCF6024C7EA19002A60F4 /* NetwrokWaringPopup.storyboard */,
-				04CBCF7024CDCE82002A60F4 /* MainView.swift */,
 				04611E13254A41B80052F248 /* FilterView.swift */,
-				0422B1E72550E07700B0EF94 /* DetectionView.swift */,
 				04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */,
 				04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */,
+				04611E19254A668B0052F248 /* FilterViewActions.swift */,
+				04611E11254A41660052F248 /* FilterVC.swift */,
+			);
+			path = ImageFilter;
+			sourceTree = "<group>";
+		};
+		0422B1EB25510AC000B0EF94 /* ImageRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				0422B1E72550E07700B0EF94 /* DetectionView.swift */,
 				0422B1E32550DB8200B0EF94 /* DetectionResultView.xib */,
 				0422B1E52550DC7100B0EF94 /* DetectionResultView.swift */,
+				0422B1DF2550DAB800B0EF94 /* DetectionViewActions.swift */,
+				0422B1E12550DB0700B0EF94 /* DetectionVC.swift */,
 			);
-			path = View;
+			path = ImageRecognition;
 			sourceTree = "<group>";
 		};
 		83BA4888B2EA2C0979A38C03 /* Frameworks */ = {

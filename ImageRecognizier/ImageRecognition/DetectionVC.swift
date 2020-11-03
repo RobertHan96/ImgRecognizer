@@ -13,6 +13,14 @@ class DetectionVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        if let imgData = UserDefaults.standard.object(forKey: "detectedImage") as? NSData
+        {
+            if let image = UIImage(data: imgData as Data)
+            {
+                 self.detectedImg.image = image
+            }
+        }
+
         detectUserRequestAction()
     }
 }
