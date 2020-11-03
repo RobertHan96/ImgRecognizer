@@ -1,4 +1,5 @@
 import UIKit
+import Photos
 
 extension FilterVC {
     @objc func addTapped() {
@@ -7,7 +8,28 @@ extension FilterVC {
     }
     
     @objc func playTapped() {
-        print("이미지 저장 기능 추후 구현 예정")
+        imageSave()
     }
     
+    func imageSave() {
+        if let img = filterdImage.image {
+            savePhotoLibrary(image: img)
+        }
+        print("image is saved")
+    }
+    
+    func savePhotoLibrary(image: UIImage) {
+        PHPhotoLibrary.requestAuthorization { status in
+            if status == .authorized {
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAsset(from: image)
+                }, completionHandler: { (_, error) in
+                 
+                })
+            } else {
+                print("error to save photo library")
+            }
+        }
+    }
+
 }

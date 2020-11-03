@@ -38,27 +38,6 @@ class FilterVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
        }
     }
 
-   @IBAction func imageSave(_ sender: Any) {
-       if let img = filterdImage.image {
-           savePhotoLibrary(image: img)
-       }
-       print("image is saved")
-   }
-       
-   private func savePhotoLibrary(image: UIImage) {
-       PHPhotoLibrary.requestAuthorization { status in
-           if status == .authorized {
-               PHPhotoLibrary.shared().performChanges({
-                   PHAssetChangeRequest.creationRequestForAsset(from: image)
-               }, completionHandler: { (_, error) in
-                
-               })
-           } else {
-               print("error to save photo library")
-           }
-       }
-   }
-
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(self.ciFilterNames[indexPath.row], "필터 효과 적용")
         if let img = originImage {

@@ -330,6 +330,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detectedImg" destination="1pj-9G-pzy" id="qjp-2u-8iN"/>
                         <outlet property="detectionResultView" destination="pRh-Lj-Hsd" id="FA4-Sh-Yrr"/>
                     </connections>
                 </viewController>
