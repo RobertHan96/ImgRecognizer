@@ -77,6 +77,5 @@ extension MainVC : UIImagePickerControllerDelegate, UINavigationControllerDelega
         dismiss(animated: true, completion: nil)
         guard let filterVC = self.storyboard?.instantiateViewController(withIdentifier: "filterVC") else { return }
         self.navigationController?.pushViewController(filterVC, animated: true)
-        detectUserRequestAction()
      }
 }
