@@ -1,8 +1,14 @@
 import Foundation
 import UIKit
+import Material
 
 extension DetectionVC {
     func setupUI() {
+        let btnResultShare = Icon.icon("cm_share_white")
+        let shareDetectionResultsBtn = UIBarButtonItem(image: btnResultShare, style: .plain, target: self, action: #selector(shareDetectionResults))
+        
+        self.navigationItem.rightBarButtonItems = [shareDetectionResultsBtn]
+
         self.detectIndicator.startAnimating()
         detectionResultView.layer.cornerRadius = 10
         detectionResultView.isHidden = true

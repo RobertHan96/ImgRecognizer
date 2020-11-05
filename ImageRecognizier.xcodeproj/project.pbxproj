@@ -189,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				0422B1E72550E07700B0EF94 /* DetectionView.swift */,
+				0422B1DF2550DAB800B0EF94 /* DetectionViewActions.swift */,
 				0422B1E32550DB8200B0EF94 /* DetectionResultView.xib */,
 				0422B1E52550DC7100B0EF94 /* DetectionResultView.swift */,
-				0422B1DF2550DAB800B0EF94 /* DetectionViewActions.swift */,
 				0422B1E12550DB0700B0EF94 /* DetectionVC.swift */,
 			);
 			path = ImageRecognition;

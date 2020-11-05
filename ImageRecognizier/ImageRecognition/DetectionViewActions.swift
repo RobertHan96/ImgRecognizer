@@ -57,4 +57,23 @@ extension DetectionVC {
         self.detectionResultView.isHidden = false
         animDetectResult(resultArr: resultArr)
     }
+    
+    @objc func shareDetectionResults() {
+        let image = self.view.captureScreenToImage()
+        let imageToShare = [ image ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+}
+
+extension UIView {
+    func captureScreenToImage() -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image {
+            rendererContext in layer.render(in: rendererContext.cgContext)
+        }
+    }
 }
