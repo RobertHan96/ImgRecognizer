@@ -168,7 +168,6 @@
 				04CBCF7024CDCE82002A60F4 /* MainView.swift */,
 				04CBCF6D24CDC8ED002A60F4 /* MainViewActions.swift */,
 				0414FA3324BEDA550082CDAB /* MainVC.swift */,
-				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -177,10 +176,11 @@
 			isa = PBXGroup;
 			children = (
 				04611E13254A41B80052F248 /* FilterView.swift */,
-				04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */,
-				04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */,
 				04611E19254A668B0052F248 /* FilterViewActions.swift */,
 				04611E11254A41660052F248 /* FilterVC.swift */,
+				04CBCF6624CD9A34002A60F4 /* NetwrokErrorHandlerController.swift */,
+				04611E15254A46930052F248 /* FilterPreviewCollectionViewCell.swift */,
+				04611E16254A46930052F248 /* FilterPreviewCollectionViewCell.xib */,
 			);
 			path = ImageFilter;
 			sourceTree = "<group>";
@@ -190,9 +190,9 @@
 			children = (
 				0422B1E72550E07700B0EF94 /* DetectionView.swift */,
 				0422B1DF2550DAB800B0EF94 /* DetectionViewActions.swift */,
+				0422B1E12550DB0700B0EF94 /* DetectionVC.swift */,
 				0422B1E32550DB8200B0EF94 /* DetectionResultView.xib */,
 				0422B1E52550DC7100B0EF94 /* DetectionResultView.swift */,
-				0422B1E12550DB0700B0EF94 /* DetectionVC.swift */,
 			);
 			path = ImageRecognition;
 			sourceTree = "<group>";

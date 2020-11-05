@@ -24,6 +24,7 @@ class FilterVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
     }
 

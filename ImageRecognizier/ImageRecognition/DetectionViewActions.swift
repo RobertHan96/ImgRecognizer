@@ -69,11 +69,4 @@ extension DetectionVC {
     }
 }
 
-extension UIView {
-    func captureScreenToImage() -> UIImage? {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image {
-            rendererContext in layer.render(in: rendererContext.cgContext)
-        }
-    }
-}
+

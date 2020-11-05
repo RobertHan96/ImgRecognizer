@@ -1,10 +1,25 @@
 import UIKit
 import Photos
+import Network
+import Toast_Swift
 
 extension FilterVC {
     @objc func analayzeImg() {
-        guard let detectionVC = self.storyboard?.instantiateViewController(withIdentifier: "DetectionVC") else { return }
-        self.navigationController?.pushViewController(detectionVC, animated: true)
+        let monitor = NWPathMonitor()
+        let queue = DispatchQueue.global(qos: .background)
+        monitor.start(queue: queue)
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                print("인터넷 연결 확인, 사물인식 API 호출")
+//                guard let detectionVC = self.storyboard?.instantiateViewController(withIdentifier: "DetectionVC") else { return }
+//                self.navigationController?.pushViewController(detectionVC, animated: true)
+            } else {
+                print("인터넷 연결 없음")
+//                self.view.makeToast("네트워크 연결 상태를 확인해주세요.", duration: 3.0, position: .center)
+//                self.showNetworkErrorPopup()
+                
+            }
+        }
     }
     
     @objc func dowloadImg() {
@@ -31,5 +46,15 @@ extension FilterVC {
             }
         }
     }
-
+    
+    func showNetworkErrorPopup() {
+        DispatchQueue.main.async {
+        let storyBoard = UIStoryboard.init(name: "NetwrokWaringPopup", bundle: nil)
+        let popupVC = storyBoard.instantiateViewController(withIdentifier: "netwrokWaring")
+        popupVC.modalPresentationStyle = .overCurrentContext
+       
+            self.present(popupVC, animated: true, completion: nil)
+        }
+    }
+    
 }

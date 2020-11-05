@@ -4,6 +4,7 @@ import Material
 
 extension DetectionVC {
     func setupUI() {
+        self.navigationController?.setupNavigationViewUI(currentNavi: self.navigationController)
         let btnResultShare = Icon.icon("cm_share_white")
         let shareDetectionResultsBtn = UIBarButtonItem(image: btnResultShare, style: .plain, target: self, action: #selector(shareDetectionResults))
         
