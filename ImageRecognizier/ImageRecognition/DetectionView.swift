@@ -3,7 +3,7 @@ import UIKit
 
 extension DetectionVC {
     func setupUI() {
-        detectionResultView.detectIndicator.stopAnimating()
+        self.detectIndicator.startAnimating()
         detectionResultView.layer.cornerRadius = 10
         detectionResultView.isHidden = true
         detectionResultView.firstResultLabel.adjustsFontSizeToFitWidth = true
@@ -18,6 +18,8 @@ extension DetectionVC {
             let containerWith = self.detectionResultView.layer.bounds.width
             self.detectionResultView.firstConfGraph.constant = containerWith * resultArr[0].confidence.makeConfToConts
             self.detectionResultView.secondConfGraph.constant = containerWith * resultArr[1].confidence.makeConfToConts
+            self.detectIndicator.stopAnimating()
+            self.detectIndicator.isHidden = true
             self.view.layoutIfNeeded()
         }
     }

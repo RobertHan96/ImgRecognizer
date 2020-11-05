@@ -2,12 +2,12 @@ import UIKit
 import Photos
 
 extension FilterVC {
-    @objc func addTapped() {
+    @objc func analayzeImg() {
         guard let detectionVC = self.storyboard?.instantiateViewController(withIdentifier: "DetectionVC") else { return }
         self.navigationController?.pushViewController(detectionVC, animated: true)
     }
     
-    @objc func playTapped() {
+    @objc func dowloadImg() {
         imageSave()
     }
     

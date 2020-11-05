@@ -23,7 +23,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="example" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-he-gpY">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="example" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-he-gpY">
                         <rect key="frame" x="-704.5" y="29.5" width="1920" height="294.5"/>
                     </imageView>
                 </subviews>

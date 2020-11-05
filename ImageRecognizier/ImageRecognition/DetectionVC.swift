@@ -4,6 +4,8 @@ import UIKit
 class DetectionVC: UIViewController {
     @IBOutlet weak var detectionResultView: DetectionResultView!
     @IBOutlet weak var detectedImg: UIImageView!
+    @IBOutlet weak var detectIndicator: UIActivityIndicatorView!
+
     var mLkit = MLkitManager()
 
     override func viewDidLoad() {

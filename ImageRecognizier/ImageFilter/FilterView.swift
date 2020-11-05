@@ -1,11 +1,15 @@
 import UIKit
+import Material
 
 extension FilterVC {
     func setupUI() {
         self.navigationController?.title = "필터 선택"
-        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-        let play = UIBarButtonItem(title: "Play", style: .plain, target: self, action: #selector(playTapped))
-        self.navigationItem.rightBarButtonItems = [add, play]
+        let btnDowloadImage = Icon.icon("ic_arrow_downward_white")
+        let dowloadImage = UIBarButtonItem(image: btnDowloadImage, style: .plain, target: self, action: #selector(dowloadImg))
+        let btnImageAnalayze = Icon.icon("ic_search_white")
+        let analayzeImage = UIBarButtonItem(image: btnImageAnalayze, style: .plain, target: self, action: #selector(analayzeImg))
+        
+        self.navigationItem.rightBarButtonItems = [dowloadImage, analayzeImage]
         filterPreviewCollectionView.delegate = self
         setupFlowLayout()
         filterPreviewCollectionView.dataSource = self

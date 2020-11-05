@@ -8,6 +8,7 @@ target 'ImageRecognizier' do
   # Pods for ImageRecognizier
 	pod 'Firebase/Analytics'
   pod 'Firebase/MLVision', '6.25.0'
+  pod 'Material', '~> 3.1.0'
 #  pod 'Firebase/MLVisionLabelModel'
   target 'ImageRecognizierTests' do
     inherit! :search_paths

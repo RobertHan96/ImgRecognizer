@@ -1,8 +1,11 @@
 import UIKit
+import Material
 
 extension MainVC {
     func setupUI() {
-        resultViewContainer.isHidden = true
+        let imageIcon = Icon.icon("ic_photo_camera_white")
+        let analayzeImage = UIBarButtonItem(image: imageIcon, style: .plain, target: self, action: #selector(open))
+        self.navigationItem.rightBarButtonItems = [analayzeImage]
         detectedImg.layer.borderWidth = 1
         detectedImg.layer.borderColor = UIColor.darkGray.cgColor
         detectedImg.layer.cornerRadius = 10

@@ -2,7 +2,6 @@ import UIKit
 
 class DetectionResultView: UIView {
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var detectIndicator: UIActivityIndicatorView!
     @IBOutlet weak var firstResultLabel: UILabel!
     @IBOutlet weak var secondResultLabel: UILabel!
     @IBOutlet weak var firstConfLabel: UILabel!
