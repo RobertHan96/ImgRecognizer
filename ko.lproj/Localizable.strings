@@ -1,0 +1,35 @@
+// Common Text
+"navigationVarBackButtonTitle" = "뒤로";
+"logHeader" = "Log - ";
+"logDetectionResultMessage" = "탐지 결과";
+"netwrokErrorMessage" = "인터넷 연결 상태를 확인해주세요.";
+
+// Alert Controller Text
+"addImageAlertTitle" = "이미지 선택";
+"addImageAlertTitleDesc" = "AI가 이미지를 탐지하기 위해 이미지를 추가해주세요.";
+"addImageAlertLibraryButtonTitle" = "사진앨범";
+"addImageAlertCameraButtonTitle" = "카메라";
+"alertCancleButtonTitle" = "취소";
+"chooseDetectWayAlertTitle" = "이미지 탐지 방법 선택";
+"chooseDetectWayAlertDesc" = "AI를 통해 확인할 유형을 선택해주세요.";
+"LabelDetectText" = "이미지 유형 감지";
+"LandmarkDetectText" = "랜드마크 감지";
+
+// Filter VC
+"InvertFilter" = "색 반전" ;
+"MonochromeFilter" = "모노크롬" ;
+"PosterizeFilter" = "포스터" ;
+"FalseColorFilter" = "황색" ;
+"MaskToAlphaFilter" = "알파" ;
+"MaximumComponentFilter" = "맥시멈" ;
+"MinimumComponentFilter" = "미니멈" ;
+"ChromeFilter" = "크롬" ;
+"FadeFilter" = "페이드" ;
+"InstantFilter" = "인스턴트" ;
+"MonoFilter" = "모노" ;
+"NoirFilter" = "노이어" ;
+"ProcessFilter" = "사진첩" ;
+"TonalFilter" = "토날" ;
+"TransferFilter" = "트랜스퍼" ;
+"SepiaFilter" = "세피아" ;
+"imageSavedNotiText" = "사진이 갤러리에 추가됐어요.";

@@ -4,8 +4,8 @@ import Foundation
 class MLkitManager {
     func logResult(resultArr : [VisionLabel]) {
         for result in resultArr {
-            print("[Log]탐지 결과")
-            print("[Log]",result)
+            print("logHeader".localized, "logDetectionResultMessage".localized)
+            print("logHeader".localized, result)
         }
     }
     

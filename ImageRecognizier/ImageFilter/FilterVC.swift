@@ -14,14 +14,16 @@ class FilterVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         "CIPhotoEffectMono", "CIPhotoEffectNoir", "CIPhotoEffectProcess",
         "CIPhotoEffectTonal", "CIPhotoEffectTransfer", "CISepiaTone"
     ]
-    let filterNamesForDisplay : [ String ] = [
-            "색 반전", "모노","포스터",
-            "황색", "알파", "맥시멈", "미니멈",
-            "크롬", "페이드", "인스턴트",
-            "모노", "노이어", "사진첩",
-            "토날", "트랜스퍼", "세피아"
-        ]
     
+    let filterNamesForDisplay : [ String ] = [
+        "InvertFilter".localized, "MonochromeFilter".localized, "PosterizeFilter".localized,
+        "FalseColorFilter".localized, "MaskToAlphaFilter".localized, "MaximumComponentFilter".localized,
+        "MinimumComponentFilter".localized, "ChromeFilter".localized, "FadeFilter".localized,
+        "InstantFilter".localized, "MonoFilter".localized, "NoirFilter".localized, "ProcessFilter".localized,
+        "TonalFilter".localized, "TransferFilter".localized, "SepiaFilter".localized
+    ]
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +42,7 @@ class FilterVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(self.ciFilterNames[indexPath.row], "필터 효과 적용")
+        print("logHeader".localized, self.ciFilterNames[indexPath.row], "필터 효과 적용")
         if let img = originImage {
             DispatchQueue.main.async {
                 self.displayFilterdImage(image: img, filterName: self.ciFilterNames[indexPath.row])

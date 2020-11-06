@@ -10,13 +10,16 @@ extension FilterVC {
         monitor.start(queue: queue)
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
-                print("인터넷 연결 확인, 사물인식 API 호출")
-//                guard let detectionVC = self.storyboard?.instantiateViewController(withIdentifier: "DetectionVC") else { return }
-//                self.navigationController?.pushViewController(detectionVC, animated: true)
+                print("logHeader".localized, "인터넷 연결 확인, 사물인식 API 호출")
+                DispatchQueue.main.async {
+                    guard let detectionVC = self.storyboard?.instantiateViewController(withIdentifier: "DetectionVC") else { return }
+                    self.navigationController?.pushViewController(detectionVC, animated: true)
+                }
             } else {
-                print("인터넷 연결 없음")
-//                self.view.makeToast("네트워크 연결 상태를 확인해주세요.", duration: 3.0, position: .center)
-//                self.showNetworkErrorPopup()
+                print("logHeader".localized, "인터넷 연결 실패")
+                DispatchQueue.main.async {
+                    self.view.makeToast("netwrokErrorMessage".localized, duration: 3.0, position: .center)
+                }
                 
             }
         }
@@ -30,7 +33,8 @@ extension FilterVC {
         if let img = filterdImage.image {
             savePhotoLibrary(image: img)
         }
-        print("image is saved")
+        print("logHeader".localized, "imageSavedNotiText".localized)
+        self.view.makeToast("imageSavedNotiText".localized, duration : 3, position: .center)
     }
     
     func savePhotoLibrary(image: UIImage) {
@@ -42,7 +46,7 @@ extension FilterVC {
                  
                 })
             } else {
-                print("error to save photo library")
+                print("logHeader".localized, "Can't save image to photo library")
             }
         }
     }

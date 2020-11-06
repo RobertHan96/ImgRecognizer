@@ -6,7 +6,7 @@ class FilterPreviewCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        setupUI()
     }
 
     func display(image : UIImage, filterName : String) {
@@ -22,5 +22,9 @@ class FilterPreviewCollectionViewCell: UICollectionViewCell {
                filterImgPreView.image = image
             }
         }
+    }
+    
+    func setupUI() {
+        self.filterName.adjustsFontSizeToFitWidth = true
     }
 }

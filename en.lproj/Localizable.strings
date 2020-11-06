@@ -1,1 +1,35 @@
+// Common Text
+"navigationVarBackButtonTitle" = "Prev";
+"logHeader" = "Log - ";
+"logDetectionResultMessage" = "Detection Result";
+"netwrokErrorMessage" = "Check your Network Conection";
 
+// Alert Controller Text
+"addImageAlertTitle" = "Choose Your Imgae";
+"addImageAlertTitleDesc" = "Choose an image for AI Image detection.";
+"addImageAlertLibraryButtonTitle" = "Gallery";
+"addImageAlertCameraButtonTitle" = "Camera";
+"alertCancleButtonTitle" = "Cancle";
+"chooseDetectWayAlertTitle" = "Choose Your Detection method";
+"chooseDetectWayAlertDesc" = "Choose Your Detection method, AI will answer!";
+"LabelDetectText" = "Image labeling";
+"LandmarkDetectText" = "Landmark labeling";
+
+// Filter VC
+"InvertFilter" = "Invert" ;
+"MonochromeFilter" = "Monochrome" ;
+"PosterizeFilter" = "Posterize" ;
+"FalseColorFilter" = "FalseColor" ;
+"MaskToAlphaFilter" = "MaskToAlpha" ;
+"MaximumComponentFilter" = "Maximum" ;
+"MinimumComponentFilter" = "Minimum" ;
+"ChromeFilter" = "Chrome" ;
+"FadeFilter" = "Fade" ;
+"InstantFilter" = "Instant" ;
+"MonoFilter" = "Mono" ;
+"NoirFilter" = "Noir" ;
+"ProcessFilter" = "Process" ;
+"TonalFilter" = "Tonal" ;
+"TransferFilter" = "Transfer" ;
+"SepiaFilter" = "Sepia" ;
+"imageSavedNotiText" = "image is saved";

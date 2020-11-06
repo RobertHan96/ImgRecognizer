@@ -29,7 +29,7 @@ extension UINavigationController {
         currentNavi?.navigationBar.backgroundColor = Color.lime.accent1
             currentNavi?.navigationBar.shadowImage = UIImage()
             let backButton: UIBarButtonItem = UIBarButtonItem()
-            backButton.title = "Prev"
+        backButton.title = "navigationVarBackButtonTitle".localized
             currentNavi?.navigationBar.topItem?.backBarButtonItem = backButton
             currentNavi?.navigationBar.topItem?.title = ""
         }

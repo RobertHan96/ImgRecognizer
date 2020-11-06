@@ -3,14 +3,15 @@ import UIKit
 
 extension DetectionVC {
     func detectUserRequestAction() {
-        let alert =  UIAlertController(title: "이미지 탐지 방법 선택", message: "AI를 통해 확인할 유형을 선택해주세요.", preferredStyle: .actionSheet)
-        let detectLabel =  UIAlertAction(title: "이미지 유형 감지", style: .default) { (action) in
+        let alert =  UIAlertController(title: "chooseDetectWayAlertTitle".localized,
+                                       message: "chooseDetectWayAlertDesc".localized, preferredStyle: .actionSheet)
+        let detectLabel =  UIAlertAction(title: "LabelDetectText".localized, style: .default) { (action) in
             self.detectLabel()
         }
-        let detectLandmark =  UIAlertAction(title: "랜드마크 감지", style: .default) { (action) in
+        let detectLandmark =  UIAlertAction(title: "LandmarkDetectText".localized, style: .default) { (action) in
             self.detectLandmark()
         }
-        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: "alertCancleButtonTitle".localized, style: .cancel, handler: nil)
         alert.addAction(detectLabel)
         alert.addAction(detectLandmark)
         alert.addAction(cancel)
@@ -28,7 +29,7 @@ extension DetectionVC {
                 }
             } // detectLandmarks
         } else {
-            print("이미지 감지 불가")
+            print("logHeader".localized, "이미지 감지 불가")
         }
     } // func
     
@@ -44,7 +45,7 @@ extension DetectionVC {
                 }
             } // detectLandmarks
         } else {
-            print("이미지 감지 불가")
+            print("logHeader".localized, "이미지 감지 불가")
         }
     } // func
     
