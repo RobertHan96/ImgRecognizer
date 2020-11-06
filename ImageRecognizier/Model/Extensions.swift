@@ -26,11 +26,13 @@ extension UIView {
 
 extension UINavigationController {
     func setupNavigationViewUI(currentNavi : UINavigationController?) {
-        currentNavi?.navigationBar.backgroundColor = Color.lime.accent1
-            currentNavi?.navigationBar.shadowImage = UIImage()
-            let backButton: UIBarButtonItem = UIBarButtonItem()
+        let bar = currentNavi?.navigationBar
+        bar!.setBackgroundImage(UIImage(), for: .default)
+        bar!.shadowImage = UIImage()
+        bar!.isTranslucent = true
+
+        let backButton: UIBarButtonItem = UIBarButtonItem()
         backButton.title = "navigationVarBackButtonTitle".localized
-            currentNavi?.navigationBar.topItem?.backBarButtonItem = backButton
-            currentNavi?.navigationBar.topItem?.title = ""
+        currentNavi?.navigationBar.topItem?.backBarButtonItem = backButton
         }
     }

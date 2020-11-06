@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="mainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainVC" customModule="ImageRecognizier" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Main" id="CIc-gt-piH"/>
+                    <navigationItem key="navigationItem" id="CIc-gt-piH"/>
                     <connections>
                         <outlet property="detectedImg" destination="ccx-SO-3BI" id="vTV-Nl-E7o"/>
                     </connections>
@@ -80,7 +80,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="454"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="wbY-Tn-7Hd" firstAttribute="top" secondItem="bOA-qD-i6D" secondAttribute="top" id="Ws0-5m-iGN"/>
                                     <constraint firstAttribute="bottom" secondItem="wbY-Tn-7Hd" secondAttribute="bottom" id="b65-df-4P1"/>

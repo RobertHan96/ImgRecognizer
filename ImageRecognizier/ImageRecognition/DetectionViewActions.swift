@@ -11,7 +11,9 @@ extension DetectionVC {
         let detectLandmark =  UIAlertAction(title: "LandmarkDetectText".localized, style: .default) { (action) in
             self.detectLandmark()
         }
-        let cancel = UIAlertAction(title: "alertCancleButtonTitle".localized, style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: "alertCancleButtonTitle".localized, style: .cancel, handler: { (action) in
+            self.navigationController?.popViewController(animated: true)
+        })
         alert.addAction(detectLabel)
         alert.addAction(detectLandmark)
         alert.addAction(cancel)
