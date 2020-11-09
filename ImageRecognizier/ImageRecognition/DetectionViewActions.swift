@@ -38,7 +38,7 @@ extension DetectionVC {
                 }
             } // detectLabel
         } else {
-            self.view.makeToast(DetectionResultError.invalidInputImage.rawValue, duration : 3, position: .center)
+            self.view.makeToast(DetectionResultError.invalidInputImage.rawValue.localized, duration : 3, position: .center)
             print("logHeader".localized, "이미지 감지 불가")
         }
     } // func
@@ -49,7 +49,7 @@ extension DetectionVC {
                 if landmarks.count == 0 {
                     self.detectionResultView.isHidden = true
                     self.detectIndicator.stopAnimating()
-                    self.view.makeToast(DetectionResultError.invalidLandmark.rawValue, duration : 3, position: .center)
+                    self.view.makeToast(DetectionResultError.invalidLandmark.rawValue.localized, duration : 3, position: .center)
                     print("logHeader".localized, "랜드마크 감지 불가")
                 } else {
                     self.mLkit.logResult(resultArr: landmarks)
@@ -57,7 +57,7 @@ extension DetectionVC {
                 }
             } // detectLandmarks
         } else {
-            self.view.makeToast(DetectionResultError.invalidInputImage.rawValue, duration : 3, position: .center)
+            self.view.makeToast(DetectionResultError.invalidInputImage.rawValue.localized, duration : 3, position: .center)
             print("logHeader".localized, "이미지 감지 불가")
         }
     } // func

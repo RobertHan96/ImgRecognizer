@@ -61,4 +61,5 @@ enum DetectionResultError : String {
     case invalidInputImage = "invalidInputImageError"
     case invalidLandmark = "invalidLandmarkError"
     case networkConectionFail = "networkConectionFailError."
+
 }
