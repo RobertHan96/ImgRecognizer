@@ -21,7 +21,6 @@ class MLkitManager {
                 let labelName = label.text
                 guard let labelConfidence = label.confidence else { return }
                 let labelConfFloat = labelConfidence.floatValue * 100
-//                let labelConfStr = "\(Int(labelConfFloat))%"
                 let label = VisionLabel(name: labelName, confidence: labelConfFloat)
                 resultLabels.append(label)
             }
@@ -34,7 +33,7 @@ class MLkitManager {
         let cloudOptions = VisionCloudDetectorOptions()
         cloudOptions.modelType = .latest
         cloudOptions.maxResults = 20
-        var  vision = Vision.vision()
+        let  vision = Vision.vision()
         let cloudDetector = vision.cloudLandmarkDetector(options: cloudOptions)
         
         cloudDetector.detect(in: img) { (landmarks, error) in
@@ -56,4 +55,10 @@ class MLkitManager {
         
     }
     
+}
+
+enum DetectionResultError : String {
+    case invalidInputImage = "invalidInputImageError"
+    case invalidLandmark = "invalidLandmarkError"
+    case networkConectionFail = "networkConectionFailError."
 }

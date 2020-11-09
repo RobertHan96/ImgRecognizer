@@ -33,3 +33,9 @@
 "TransferFilter" = "Transfer" ;
 "SepiaFilter" = "Sepia" ;
 "imageSavedNotiText" = "image is saved";
+"imageSaveFailError" = "Can't save this image try it later";
+
+// Detection VC
+"invalidInputImageError" = "Can't find any result for this image. \n try again later";
+"invalidLandmarkError" = "No match for any Landmarks.";
+"networkConectionFailError" = "Cehck your Network Conection.";

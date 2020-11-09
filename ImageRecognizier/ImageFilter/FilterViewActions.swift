@@ -19,6 +19,7 @@ extension FilterVC {
                 print("logHeader".localized, "인터넷 연결 실패")
                 DispatchQueue.main.async {
                     self.view.makeToast("netwrokErrorMessage".localized, duration: 3.0, position: .center)
+                    self.navigationController?.popViewController(animated: true)
                 }
                 
             }
@@ -47,6 +48,7 @@ extension FilterVC {
                 })
             } else {
                 print("logHeader".localized, "Can't save image to photo library")
+                self.view.makeToast("imageSaveFailError".localized, duration : 3, position: .center)
             }
         }
     }

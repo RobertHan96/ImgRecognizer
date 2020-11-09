@@ -33,3 +33,9 @@
 "TransferFilter" = "트랜스퍼" ;
 "SepiaFilter" = "세피아" ;
 "imageSavedNotiText" = "사진이 갤러리에 추가됐어요.";
+"imageSaveFailError" = "이미지 저장 오류 : 잠시 후 다시 시도해주세요.";
+
+// Detection VC
+"invalidInputImageError" = "이미지를 인식하지 못했습니다.\n다시 시도해주세요.";
+"invalidLandmarkError" = "일치하는 랜드마크가 없습니다.";
+"networkConectionFailError" = "인터넷 연결상태를 확인해주세요.";

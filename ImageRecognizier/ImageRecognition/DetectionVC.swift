@@ -22,7 +22,11 @@ class DetectionVC: UIViewController {
                  self.detectedImg.image = image
             }
         }
-
-        detectUserRequestAction()
+        
+        do {
+            self.detectUserRequestAction()
+        } catch {
+            print("logHeader".localized, error.localizedDescription)
+        }
     }
 }

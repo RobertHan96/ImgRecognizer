@@ -4,7 +4,6 @@ import Material
 extension FilterVC {
     func setupUI() {
         self.navigationController?.setupNavigationViewUI(currentNavi: self.navigationController)
-//        self.navigationController?.title = "필터 선택"
         let btnDowloadImage = Icon.icon("ic_arrow_downward_white")
         let dowloadImage = UIBarButtonItem(image: btnDowloadImage, style: .plain, target: self, action: #selector(dowloadImg))
         let btnImageAnalayze = Icon.icon("ic_search_white")
