@@ -5,7 +5,8 @@ class DetectionVC: UIViewController {
     @IBOutlet weak var detectionResultView: DetectionResultView!
     @IBOutlet weak var detectedImg: UIImageView!
     @IBOutlet weak var detectIndicator: UIActivityIndicatorView!
-
+    @IBOutlet weak var detectionInfromText: UILabel!
+    
     var mLkit = MLkitManager()
 
     override func viewDidLoad() {

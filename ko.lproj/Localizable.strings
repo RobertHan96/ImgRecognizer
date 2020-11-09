@@ -4,6 +4,9 @@
 "logDetectionResultMessage" = "탐지 결과";
 "netwrokErrorMessage" = "인터넷 연결 상태를 확인해주세요.";
 
+// Main VC
+"mainViewInformText" = "이미지 분석을 위해 사진을 추가해주세요." ;
+
 // Alert Controller Text
 "addImageAlertTitle" = "이미지 선택";
 "addImageAlertTitleDesc" = "AI가 이미지를 탐지하기 위해 이미지를 추가해주세요.";
@@ -39,3 +42,4 @@
 "invalidInputImageError" = "이미지를 인식하지 못했습니다.\n다시 시도해주세요.";
 "invalidLandmarkError" = "일치하는 랜드마크가 없습니다.";
 "networkConectionFailError" = "인터넷 연결상태를 확인해주세요.";
+"detectionInformText" = "결과";

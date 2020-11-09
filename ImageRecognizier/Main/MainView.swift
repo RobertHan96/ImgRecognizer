@@ -10,6 +10,8 @@ extension MainVC {
         detectedImg.layer.borderWidth = 1
         detectedImg.layer.borderColor = UIColor.darkGray.cgColor
         detectedImg.layer.cornerRadius = 10
+        infromText.text = "mainViewInformText".localized
+        infromText.adjustsFontSizeToFitWidth = true
         
     }
     

@@ -4,6 +4,9 @@
 "logDetectionResultMessage" = "Detection Result";
 "netwrokErrorMessage" = "Check your Network Conection";
 
+// Main VC
+"mainViewInformText" = "Add your image for analyze" ;
+
 // Alert Controller Text
 "addImageAlertTitle" = "Choose Your Imgae";
 "addImageAlertTitleDesc" = "Choose an image for AI Image detection.";
@@ -39,3 +42,4 @@
 "invalidInputImageError" = "Can't find any result for this image. \n try again later";
 "invalidLandmarkError" = "No match for any Landmarks.";
 "networkConectionFailError" = "Cehck your Network Conection.";
+"detectionInformText" = "Result";

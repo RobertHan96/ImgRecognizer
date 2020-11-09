@@ -9,7 +9,6 @@ extension String {
     }
 
 extension Float {
-    // try ~ catch 문으로 변환 필요
     var makeConfPoint: String {return "\(String(format : "%.1f", self))%" }
     var makeConfToConts: CGFloat {return CGFloat(self*0.01) }
 

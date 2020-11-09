@@ -18,6 +18,9 @@ extension DetectionVC {
         detectedImg.layer.borderWidth = 1
         detectedImg.layer.borderColor = UIColor.darkGray.cgColor
         detectedImg.layer.cornerRadius = 10
+        
+        detectionInfromText.adjustsFontSizeToFitWidth = true
+        detectionInfromText.text = "detectionInformText".localized
     }
 
     func animDetectResult(resultArr : [VisionLabel]) {

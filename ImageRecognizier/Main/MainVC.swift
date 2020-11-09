@@ -4,6 +4,7 @@ import Network
 
 class MainVC: UIViewController {
     @IBOutlet weak var detectedImg: UIImageView!
+    @IBOutlet weak var infromText: UILabel!
     let picker = UIImagePickerController()
 
     override func viewDidLoad() {

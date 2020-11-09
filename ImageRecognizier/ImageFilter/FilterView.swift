@@ -9,7 +9,9 @@ extension FilterVC {
         let btnImageAnalayze = Icon.icon("ic_search_white")
         let analayzeImage = UIBarButtonItem(image: btnImageAnalayze, style: .plain, target: self, action: #selector(analayzeImg))
         self.navigationItem.rightBarButtonItems = [dowloadImage, analayzeImage]
-        
+        filterdImage.layer.borderWidth = 1
+        filterdImage.layer.borderColor = UIColor.darkGray.cgColor
+        filterdImage.layer.cornerRadius = 10
         filterPreviewCollectionView.delegate = self
         setupFlowLayout()
         filterPreviewCollectionView.dataSource = self
