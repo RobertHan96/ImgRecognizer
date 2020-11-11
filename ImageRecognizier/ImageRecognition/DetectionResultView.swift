@@ -6,8 +6,12 @@ class DetectionResultView: UIView {
     @IBOutlet weak var secondResultLabel: UILabel!
     @IBOutlet weak var firstConfLabel: UILabel!
     @IBOutlet weak var secondConfLabel: UILabel!
-    @IBOutlet weak var firstConfGraph: NSLayoutConstraint!
-    @IBOutlet weak var secondConfGraph: NSLayoutConstraint!
+    @IBOutlet weak var firstConfGraphBar: UIView!
+    @IBOutlet weak var secondConfGraphBar: UIView!
+    @IBOutlet weak var firstConfGraphBarWidth: NSLayoutConstraint!
+    @IBOutlet weak var secondConfGraphBarWidth: NSLayoutConstraint!
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame : frame)

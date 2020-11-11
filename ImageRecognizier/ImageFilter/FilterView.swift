@@ -4,14 +4,14 @@ import Material
 extension FilterVC {
     func setupUI() {
         self.navigationController?.setupNavigationViewUI(currentNavi: self.navigationController)
-        let btnDowloadImage = Icon.icon("ic_arrow_downward_white")
-        let dowloadImage = UIBarButtonItem(image: btnDowloadImage, style: .plain, target: self, action: #selector(dowloadImg))
-        let btnImageAnalayze = Icon.icon("ic_search_white")
-        let analayzeImage = UIBarButtonItem(image: btnImageAnalayze, style: .plain, target: self, action: #selector(analayzeImg))
+        let dowloadImage = UIBarButtonItem(image: UIImage.downloadButtonImage, style: .plain, target: self, action: #selector(dowloadImg))
+        let analayzeImage = UIBarButtonItem(image: UIImage.analayzeButtonImage, style: .plain, target: self, action: #selector(analayzeImg))
         self.navigationItem.rightBarButtonItems = [dowloadImage, analayzeImage]
         filterdImage.layer.borderWidth = 1
         filterdImage.layer.borderColor = UIColor.darkGray.cgColor
         filterdImage.layer.cornerRadius = 10
+        
+        filterPreviewCollectionView.borderColor = .InfromLabelTextColor
         filterPreviewCollectionView.delegate = self
         setupFlowLayout()
         filterPreviewCollectionView.dataSource = self

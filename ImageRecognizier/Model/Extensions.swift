@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 import Material
+
 extension String {
     var localized: String {
           return NSLocalizedString(self, tableName: "Localizable", value: self, comment: "")
@@ -35,3 +36,20 @@ extension UINavigationController {
         currentNavi?.navigationBar.topItem?.backBarButtonItem = backButton
         }
     }
+
+extension UIColor {
+    static let navigationBarButtinColor: UIColor = UIColor(named: "NavigationButtonColor")!
+    static let ResultGraphBarColor: UIColor = UIColor(named: "ResultGraphBarColor")!
+    static let ResultNameColor: UIColor = UIColor(named: "ResultNameColor")!
+    static let ResultConfColor: UIColor = UIColor(named: "ResultConfColor")!
+    static let InfromLabelTextColor: UIColor = UIColor(named: "InfromLabelTextColor")!
+    static let BlackBackgroundColor: UIColor = UIColor(named: "BlackBackgroundColor")!
+}
+
+extension UIImage {
+    static let photoCameraButtonImage = Icon.icon("ic_photo_camera_white")
+    static let downloadButtonImage = Icon.icon("ic_arrow_downward_white")
+    static let analayzeButtonImage = Icon.icon("ic_search_white")
+    static let resultShareButtomImage = Icon.icon("cm_share_white")
+
+}

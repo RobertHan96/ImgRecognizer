@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,10 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetectionResultView" customModule="ImageRecognizier" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="PJ1-gt-si0"/>
-                <outlet property="firstConfGraph" destination="5ta-IK-RaM" id="yWp-ft-gcW"/>
+                <outlet property="firstConfGraphBar" destination="Lk5-8G-7Xd" id="mzb-xv-xAi"/>
+                <outlet property="firstConfGraphBarWidth" destination="5ta-IK-RaM" id="yWp-ft-gcW"/>
                 <outlet property="firstConfLabel" destination="2xx-yM-XGL" id="EEi-qE-5fW"/>
                 <outlet property="firstResultLabel" destination="doR-we-cQm" id="FJD-QU-Q2C"/>
-                <outlet property="secondConfGraph" destination="zXx-ig-8bI" id="fcw-PG-heZ"/>
+                <outlet property="secondConfGraphBar" destination="mxy-lC-CSd" id="na9-WV-oSe"/>
+                <outlet property="secondConfGraphBarWidth" destination="zXx-ig-8bI" id="fcw-PG-heZ"/>
                 <outlet property="secondConfLabel" destination="H8V-1E-r25" id="NQ0-nY-Axd"/>
                 <outlet property="secondResultLabel" destination="NYN-Z7-Ma3" id="Wgj-Ow-1hT"/>
             </connections>
@@ -27,74 +30,66 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-bo-aPv">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doR-we-cQm">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doR-we-cQm">
                             <rect key="frame" x="0.0" y="0.0" width="36.5" height="200"/>
-                            <attributedString key="attributedText">
-                                <fragment content="결과">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="21" name="NanumGothic"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
+                            <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="21"/>
+                            <color key="textColor" name="ResultNameColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lk5-8G-7Xd">
                             <rect key="frame" x="0.0" y="206" width="50" height="200"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xx-yM-XGL">
-                                    <rect key="frame" x="5" y="5" width="0.0" height="190"/>
+                                    <rect key="frame" x="5" y="4" width="0.0" height="192"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <color key="textColor" name="ResultConfColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="ResultGraphBarColor"/>
                             <constraints>
                                 <constraint firstItem="2xx-yM-XGL" firstAttribute="leading" secondItem="Lk5-8G-7Xd" secondAttribute="leading" constant="5" id="2nl-4E-7Ke"/>
                                 <constraint firstAttribute="width" constant="50" id="5ta-IK-RaM"/>
-                                <constraint firstAttribute="bottom" secondItem="2xx-yM-XGL" secondAttribute="bottom" constant="5" id="bD8-ps-rxX"/>
-                                <constraint firstItem="2xx-yM-XGL" firstAttribute="top" secondItem="Lk5-8G-7Xd" secondAttribute="top" constant="5" id="qyT-ud-Kib"/>
+                                <constraint firstAttribute="bottom" secondItem="2xx-yM-XGL" secondAttribute="bottom" constant="4" id="bD8-ps-rxX"/>
+                                <constraint firstItem="2xx-yM-XGL" firstAttribute="top" secondItem="Lk5-8G-7Xd" secondAttribute="top" constant="4" id="qyT-ud-Kib"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2xx-yM-XGL" secondAttribute="trailing" constant="5" id="t29-tz-cDh"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYN-Z7-Ma3">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYN-Z7-Ma3">
                             <rect key="frame" x="0.0" y="412" width="36.5" height="200"/>
-                            <attributedString key="attributedText">
-                                <fragment content="결과">
-                                    <attributes>
-                                        <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="21" name="NanumGothic"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
+                            <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="21"/>
+                            <color key="textColor" name="ResultNameColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxy-lC-CSd">
                             <rect key="frame" x="0.0" y="618" width="50" height="200"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8V-1E-r25">
-                                    <rect key="frame" x="5" y="5" width="0.0" height="190"/>
+                                    <rect key="frame" x="5" y="4" width="0.0" height="192"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <color key="textColor" name="ResultConfColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="ResultGraphBarColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H8V-1E-r25" secondAttribute="trailing" constant="5" id="1hS-g5-vRg"/>
-                                <constraint firstItem="H8V-1E-r25" firstAttribute="top" secondItem="mxy-lC-CSd" secondAttribute="top" constant="5" id="QgY-Dm-rWO"/>
-                                <constraint firstAttribute="bottom" secondItem="H8V-1E-r25" secondAttribute="bottom" constant="5" id="lYL-1I-0Gn"/>
+                                <constraint firstItem="H8V-1E-r25" firstAttribute="top" secondItem="mxy-lC-CSd" secondAttribute="top" constant="4" id="QgY-Dm-rWO"/>
+                                <constraint firstAttribute="bottom" secondItem="H8V-1E-r25" secondAttribute="bottom" constant="4" id="lYL-1I-0Gn"/>
                                 <constraint firstItem="H8V-1E-r25" firstAttribute="leading" secondItem="mxy-lC-CSd" secondAttribute="leading" constant="5" id="uMw-g8-1Bu"/>
                                 <constraint firstAttribute="width" constant="50" id="zXx-ig-8bI"/>
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="BlackBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                            <color key="value" red="0.36228420989999999" green="0.75833918369999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" name="BlackBackgroundColor"/>
             <constraints>
                 <constraint firstItem="hSh-bo-aPv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Lbp-2V-r6T"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hSh-bo-aPv" secondAttribute="bottom" id="Q8f-CE-9LF"/>
@@ -106,4 +101,18 @@
             <point key="canvasLocation" x="139" y="130"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="BlackBackgroundColor">
+            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ResultConfColor">
+            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ResultGraphBarColor">
+            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ResultNameColor">
+            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
