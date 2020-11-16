@@ -1,6 +1,6 @@
 import UIKit
 import Material
-
+import Toast_Swift
 extension FilterVC {
     func setupUI() {
         self.navigationController?.setupNavigationViewUI(currentNavi: self.navigationController)
@@ -11,11 +11,17 @@ extension FilterVC {
         filterdImage.layer.borderColor = UIColor.darkGray.cgColor
         filterdImage.layer.cornerRadius = 10
         
+        buttonGuidanceLabel.adjustsFontSizeToFitWidth = true
+        buttonGuidanceLabel.text = ""
         filterPreviewCollectionView.borderColor = .InfromLabelTextColor
         filterPreviewCollectionView.delegate = self
         setupFlowLayout()
         filterPreviewCollectionView.dataSource = self
         filterPreviewCollectionView.register(UINib(nibName: "FilterPreviewCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "filterPreViewCell")
+        
+        var toastStyle = ToastStyle()
+        toastStyle.backgroundColor = .InfromLabelTextColor
+        self.view.makeToast("buttonGuidance".localized, duration: 3, position : .center)
     }
     
     private func setupFlowLayout() {
@@ -26,6 +32,12 @@ extension FilterVC {
         let halfWidth = UIScreen.main.bounds.width / 5
         flowLayout.itemSize = CGSize(width: halfWidth * 0.9 , height: halfWidth * 0.9)
         self.filterPreviewCollectionView.collectionViewLayout = flowLayout
+    }
+    
+    func deleteButtonGuidanceText() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4000) {
+            self.buttonGuidanceLabel.text = ""
+        }
     }
 
 }

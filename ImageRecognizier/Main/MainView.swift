@@ -4,13 +4,15 @@ import Material
 extension MainVC {
     func setupUI() {
         self.navigationController?.setupNavigationViewUI(currentNavi: self.navigationController)
-        let analayzeImage = UIBarButtonItem(image: UIImage.photoCameraButtonImage, style: .plain, target: self, action: #selector(open))
-        self.navigationItem.rightBarButtonItems = [analayzeImage]
         detectedImg.layer.borderWidth = 1
         detectedImg.layer.borderColor = UIColor.darkGray.cgColor
         detectedImg.layer.cornerRadius = 10
         infromText.text = "mainViewInformText".localized
         infromText.adjustsFontSizeToFitWidth = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(addImg))
+        detectedImg.addGestureRecognizer(tapGesture)
+        detectedImg.isUserInteractionEnabled = true
         
     }
     

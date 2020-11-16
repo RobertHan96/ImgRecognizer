@@ -4,6 +4,7 @@ import Photos
 
 class FilterVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var buttonGuidanceLabel: UILabel!
     @IBOutlet weak var filterdImage: UIImageView!
     @IBOutlet weak var filterPreviewCollectionView: UICollectionView!
     var originImage : UIImage?
@@ -26,7 +27,6 @@ class FilterVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
 

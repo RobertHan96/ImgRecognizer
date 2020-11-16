@@ -19,6 +19,7 @@
 "LandmarkDetectText" = "Landmark labeling";
 
 // Filter VC
+"buttonGuidance" = "Press above buttons to start detect or save the image";
 "InvertFilter" = "Invert" ;
 "MonochromeFilter" = "Monochrome" ;
 "PosterizeFilter" = "Posterize" ;

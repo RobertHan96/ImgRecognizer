@@ -19,6 +19,7 @@
 "LandmarkDetectText" = "랜드마크 감지";
 
 // Filter VC
+"buttonGuidance" = "상단 버튼을 눌러 이미지 분석을 시작하거나, 파일로 저장할 수 있습니다.";
 "InvertFilter" = "색 반전" ;
 "MonochromeFilter" = "모노크롬" ;
 "PosterizeFilter" = "포스터" ;

@@ -15,6 +15,8 @@ class MainVC: UIViewController {
     @IBAction func addImg(_ sender: Any) {
         addImageAlertAction()
     }
+    
+    
 }
 
 extension MainVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {

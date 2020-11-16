@@ -31,4 +31,5 @@ extension DetectionVC {
             self.view.layoutIfNeeded()
         }
     }
+    
 }

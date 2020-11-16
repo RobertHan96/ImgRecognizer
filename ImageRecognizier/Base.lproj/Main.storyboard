@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-256" translatesAutoresizingMaskIntoConstraints="NO" id="ccx-SO-3BI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-256" translatesAutoresizingMaskIntoConstraints="NO" id="ccx-SO-3BI">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="I8k-Lu-qyo"/>
@@ -84,34 +84,45 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOA-qD-i6D">
-                                <rect key="frame" x="20" y="124" width="374" height="454"/>
+                                <rect key="frame" x="20" y="54" width="374" height="564"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-Tn-7Hd">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="454"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-Tn-7Hd">
+                                        <rect key="frame" x="0.0" y="116" width="374" height="448"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLU-Zo-Lq6">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="102"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="InfromLabelTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="wbY-Tn-7Hd" firstAttribute="top" secondItem="bOA-qD-i6D" secondAttribute="top" id="Ws0-5m-iGN"/>
+                                    <constraint firstItem="wLU-Zo-Lq6" firstAttribute="top" secondItem="bOA-qD-i6D" secondAttribute="top" id="a7r-e5-vdC"/>
+                                    <constraint firstAttribute="trailing" secondItem="wLU-Zo-Lq6" secondAttribute="trailing" constant="20" id="b3c-9Y-CIt"/>
                                     <constraint firstAttribute="bottom" secondItem="wbY-Tn-7Hd" secondAttribute="bottom" id="b65-df-4P1"/>
                                     <constraint firstItem="wbY-Tn-7Hd" firstAttribute="leading" secondItem="bOA-qD-i6D" secondAttribute="leading" id="bW9-2I-stC"/>
+                                    <constraint firstItem="wLU-Zo-Lq6" firstAttribute="leading" secondItem="bOA-qD-i6D" secondAttribute="leading" id="dvY-ew-a04"/>
                                     <constraint firstAttribute="trailing" secondItem="wbY-Tn-7Hd" secondAttribute="trailing" id="jpb-fG-LnK"/>
+                                    <constraint firstItem="wbY-Tn-7Hd" firstAttribute="top" secondItem="wLU-Zo-Lq6" secondAttribute="bottom" constant="14" id="kgv-Ea-HDv"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="BlackBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Uw5-ww-a33" firstAttribute="top" secondItem="bOA-qD-i6D" secondAttribute="bottom" constant="80" id="5oQ-tP-cTd"/>
+                            <constraint firstItem="Uw5-ww-a33" firstAttribute="top" secondItem="bOA-qD-i6D" secondAttribute="bottom" constant="40" id="5oQ-tP-cTd"/>
                             <constraint firstItem="Uw5-ww-a33" firstAttribute="leading" secondItem="mwz-zG-f8x" secondAttribute="leading" id="61T-48-ejs"/>
                             <constraint firstItem="mwz-zG-f8x" firstAttribute="trailing" secondItem="Uw5-ww-a33" secondAttribute="trailing" id="78i-wI-0I5"/>
                             <constraint firstItem="mwz-zG-f8x" firstAttribute="bottom" secondItem="Uw5-ww-a33" secondAttribute="bottom" constant="4" id="LiQ-u5-CEa"/>
-                            <constraint firstItem="bOA-qD-i6D" firstAttribute="top" secondItem="mwz-zG-f8x" secondAttribute="top" constant="80" id="YX8-54-aRo"/>
+                            <constraint firstItem="bOA-qD-i6D" firstAttribute="top" secondItem="mwz-zG-f8x" secondAttribute="top" constant="10" id="YX8-54-aRo"/>
                             <constraint firstItem="mwz-zG-f8x" firstAttribute="trailing" secondItem="bOA-qD-i6D" secondAttribute="trailing" constant="20" id="a3W-PM-TMk"/>
                             <constraint firstItem="bOA-qD-i6D" firstAttribute="leading" secondItem="mwz-zG-f8x" secondAttribute="leading" constant="20" id="e9u-jK-8WR"/>
+                            <constraint firstItem="wbY-Tn-7Hd" firstAttribute="height" secondItem="Iqo-uh-nIe" secondAttribute="height" multiplier="0.5" id="lqM-dH-Ry4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mwz-zG-f8x"/>
                     </view>
                     <navigationItem key="navigationItem" id="82R-ur-Ajh"/>
                     <connections>
+                        <outlet property="buttonGuidanceLabel" destination="wLU-Zo-Lq6" id="0ma-MK-V1f"/>
                         <outlet property="filterPreviewCollectionView" destination="Uw5-ww-a33" id="DZV-9V-lf1"/>
                         <outlet property="filterdImage" destination="wbY-Tn-7Hd" id="a34-rV-4kV"/>
                     </connections>
@@ -163,7 +174,7 @@
                                         <color key="textColor" name="InfromLabelTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pj-9G-pzy">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pj-9G-pzy">
                                         <rect key="frame" x="0.0" y="57" width="374" height="465"/>
                                     </imageView>
                                 </subviews>
@@ -220,10 +231,10 @@
     <resources>
         <image name="Icon-256" width="256" height="256"/>
         <namedColor name="BlackBackgroundColor">
-            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="InfromLabelTextColor">
-            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.26100000739097595" green="0.26100000739097595" blue="0.26100000739097595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
